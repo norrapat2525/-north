@@ -50,7 +50,7 @@
     <div id="modal-container"></div><div id="toast-container" class="fixed bottom-5 right-5 z-50"></div>
     <script>
         // ---> ใส่ WEB APP URL ของคุณตรงนี้ <---
-        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzfzNSsIgAi8hfe36_R3tbiiglpmXEJFcBDobOKtQ/dev';
+        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyTu5HKo0kqu6w1VdS3EtiFwTTy-y_oV6Ih218Hjh3FB5zdFF7xyF4wfHUelgfvTVI/exec';
 
         const state = { products: [], sales: [] };
         const dom = { loadingState: document.getElementById('loading-state'), mainContent: document.getElementById('main-content'), kpi: { totalProducts: document.getElementById('kpi-total-products'), stockValue: document.getElementById('kpi-stock-value'), salesToday: document.getElementById('kpi-sales-today'), lowStock: document.getElementById('kpi-low-stock'), }, productsTableBody: document.getElementById('products-table-body'), salesLogTableBody: document.getElementById('sales-log-table-body'), saleProductSelect: document.getElementById('sale-product-id'), modalContainer: document.getElementById('modal-container'), toastContainer: document.getElementById('toast-container'), addSaleForm: document.getElementById('addSaleForm'), };
@@ -58,7 +58,7 @@
         async function fetchData() {
             showLoading(true);
             try {
-                if (APPS_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbzfzNSsIgAi8hfe36_R3tbiiglpmXEJFcBDobOKtQ/dev') throw new Error('คุณยังไม่ได้ตั้งค่า APPS_SCRIPT_URL ในโค้ด HTML');
+                if (APPS_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbyTu5HKo0kqu6w1VdS3EtiFwTTy-y_oV6Ih218Hjh3FB5zdFF7xyF4wfHUelgfvTVI/exec') throw new Error('คุณยังไม่ได้ตั้งค่า APPS_SCRIPT_URL ในโค้ด HTML');
                 const response = await fetch(APPS_SCRIPT_URL);
                 if (!response.ok) throw new Error(`Network error: ${response.statusText}`);
                 const result = await response.json();
